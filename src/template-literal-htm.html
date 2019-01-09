@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template Literal-html</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+</body>
+<script>
+	const article = {
+		title: 'Aprendendo Template Strings',
+		intro: 'Uma breve explicação de como se utilizar template strings do ES6 em seu código hoje!',
+		body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam magni et explicabo. Quod assumenda, harum nam doloremque sunt, officia at! Dolorem libero dolore quis, necessitatibus saepe. Quisquam illum, rerum molestiae!',
+		tags: ['ES6', 'Js', 'Template-literal']
+	};
+
+	const markup = `
+					<article>
+						<header>
+							<h1>${article.title}</h1>
+						</header>
+						<section>
+							<p>${article.intro}</p>
+						</section>
+						<footer>
+							<ul>
+								${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+							</ul>
+						</footer>
+					</article>
+				`;
+				document.body.innerHTML = markup;
+</script>
+</html>
