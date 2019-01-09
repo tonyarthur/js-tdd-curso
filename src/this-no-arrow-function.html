@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>02- this no arrow function</title>
+</head>
+<body>
+
+	<button id="btn">Click Me!</button>
+
+</body>
+
+<script>
+
+	/*
+	const btn = document.getElementById('btn');
+	btn.addEventListener('click', function(){
+			console.log(this);
+			//O this é referente ao objeto btn criado.
+	});
+	*/
+
+	// Com o uso da arrow function o envento ocorre sobre o todo ou seja sobre o window.
+	const btn = document.getElementById('btn');
+	btn.addEventListener('click', () =>{
+			console.log(this);
+
+	});
+</script>
+</html>
