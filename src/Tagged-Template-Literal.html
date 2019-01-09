@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tagged Template Literal</title>
+	<meta charset="utf-8">
+</head>
+<style >
+	.green{
+		color:green;
+		font-size: 25px;
+	}
+</style>
+<body>
+
+</body>
+<script>
+	const city ='Curitiba';
+	const something = 'Belém';
+	const otherThing = 'Rio de Janeiro';
+
+	function green (template, ...values){
+		return template.reduce((accumutalor, part, i) =>{
+			return `
+				${accumutalor}
+				<span class="green"> ${values[i-1].toUpperCase()}</span>
+				${part}
+			`
+		});
+	}
+
+	const brasil = green `I love in ${city} the city of ${something} and ${otherThing}!`;
+
+	document.body.innerHTML = brasil;
+</script>
+</html>
