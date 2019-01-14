@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>03 - Novos Métodos para String</title>
+</head>
+<body>
+	
+</body>
+<script>
+    let text = 'Lorem ipsum dolar sit amet';
+
+    //O metodo startsWith(começar com) é utilizado para iniciar a partir de uma palavra na string;
+    console.log(text.startsWith('Lorem'));
+
+    console.log(text.startsWith('rem', 2));
+
+    //Similar ao startsWith mas neste caso ele verificar se termina com a determinada palavra.
+    console.log(text.endsWith('amet'));
+
+    //método repeat neste caso irá repetir a string lol 10 vezes.
+    console.log('lol' .repeat(10));
+    //este metodo verifica se a estring passada como paramtero existe neste caso em nossa variável.
+    console.log(text.includes('ipsum'));
+</script>
+</html>
