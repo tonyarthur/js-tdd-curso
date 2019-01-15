@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>02 - Default Parameters</title>
+</head>
+<body>
+	
+</body>
+<script>
+    /*
+    Dessa forma será mostrado o valor undefined se não passar valor algum.
+
+    function hello(name, surname){
+        console.log(`hello ${name} ${surname} ! How are you? `);
+    }*/
+    //Aqui corre o dafault parameter. 
+    function hello(name ='Tony', surname='show'){
+        console.log(`hello ${name} ${surname} ! How are you? `);
+    }
+    hello();
+
+    hello ('Tony', 'Arthur');
+    hello ('Tony');
+</script>
+</html>
